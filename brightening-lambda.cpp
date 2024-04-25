@@ -6,8 +6,7 @@ int main() {
 	std::cout << "Brightening a 512 x 512 image\n";
 
 	if (image->imageSizeIsValid()) {
-		ImageBrightener brightener(image);
-		int attenuatedCount = brightener.BrightenWholeImage();
+		int attenuatedCount = ImageBrightener::BrightenWholeImageWithLambda(image);
 		std::cout << "Attenuated " << attenuatedCount << " pixels\n";
 		return 0;
 	}
